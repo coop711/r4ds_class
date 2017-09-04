@@ -64,6 +64,10 @@ ggplot(data = mpg) +
                            y = hwy)) +
   facet_wrap(~ class, 
              nrow = 2)
+g0 +
+  geom_point() +
+  facet_wrap(~ class, 
+             nrow = 2)
 ggplot(data = mpg) +
   geom_point(mapping = aes(x = displ, 
                            y = hwy)) +
