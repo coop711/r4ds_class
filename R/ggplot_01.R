@@ -1,7 +1,18 @@
 library(tidyverse)
+
+## The First Steps
+
+### mpg
 mpg
+
+### ggplot
+
+ggplot()
 ggplot(data = mpg) +
   geom_point(mapping = aes(x = displ, y = hwy))
+
+## Aesthetic Mappings
+
 ggplot(data = mpg) +
   geom_point(mapping = aes(x = displ, y = hwy, colour = class))
 ggplot(data = mpg) +
@@ -15,9 +26,12 @@ ggplot(data = mpg) +
 ggplot(data = mpg) +
   geom_point(mapping = aes(x = displ, y = hwy, colour = "blue"))
 ggplot(data = mpg) +
-  geom_point(mapping = aes(x = displ, y = hwy, colour = TRUE))
+  geom_point(mapping = aes(x = displ, y = hwy, colour = TRUE))ets
+
+## Facets
+
 ggplot(data = mpg) +
-  geom_point(mapping = aes(x = displ, y = hwy)) +
+  geom_point(metsapping = aes(x = displ, y = hwy)) +
   facet_wrap(~ class, nrow = 2)
 ggplot(data = mpg) +
   geom_point(mapping = aes(x = displ, y = hwy)) +
@@ -31,6 +45,9 @@ ggplot(data = mpg) +
 ggplot(data = mpg) +
   geom_point(mapping = aes(x = displ, y = hwy)) +
   facet_grid(. ~ class)
+
+## Geometric Objects
+
 ggplot(data = mpg) +
   geom_point(mapping = aes(x = displ, y = hwy))
 ggplot(data = mpg) +
@@ -56,3 +73,5 @@ ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) +
   geom_smooth(data = filter(mpg, class == "subcompact"),
               se = FALSE
   )
+
+## Statistical Transformation
